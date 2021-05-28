@@ -1,0 +1,20 @@
+<div *ngIf="products">
+    <div *ngFor="let p of products._embedded.products">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel panel-heading">{{p.nameProduct}}</div>
+                <div class="panel-body">
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="{{this.catalogueService.host+'/photoProduct/'+p.id}}" alt="">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
